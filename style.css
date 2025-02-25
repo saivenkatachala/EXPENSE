@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+h1 {
+    color: #222;
+    font-size: 28px;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    background: rgba(224, 247, 250, 0.9);
+    padding: 15px 0;
+    z-index: 10;
+    border-radius: 10px 10px 0 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1:hover {
+    background: rgba(128, 222, 234, 0.9);
+    color: #000;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Primary Button */
+button:first-of-type {
+    background-color: #4fc3f7;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(79, 195, 247, 0.5);
+}
+
+/* Secondary Buttons */
+button:nth-of-type(2) {
+    background-color: #81c784;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(129, 199, 132, 0.5);
+}
+
+/* Logout Button */
+button:last-of-type {
+    background-color: #e57373;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(229, 115, 115, 0.5);
+}
+
+/* Expense Cards */
+#expenses-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.expense-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expense-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.expense-card div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.expense-card span {
+    font-weight: bold;
+}
+
+#total-expense-container {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 20px;
+    background: rgba(224, 247, 250, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#total-expense-container:hover {
+    background: rgba(128, 222, 234, 0.9);
+    color: #000;
+}
+
+/* Cursor Glow Effect */
+body {
+    cursor: url('https://cdn.custom-cursor.com/db/cursors/32/12555.png'), auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    .expense-card {
+        padding: 10px;
+    }
+}

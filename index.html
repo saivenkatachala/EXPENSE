@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="123.png">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Register Page -->
+    <div id="register-page" class="page">
+      <h1>Register</h1>
+      <input type="text" id="register-username" placeholder="Username">
+      <input type="password" id="register-password" placeholder="Password">
+      <button onclick="handleRegister()">Register</button>
+      <p class="redirect-text">Already registered? <a href="#" onclick="showPage('login-page')">Login here</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page" style="display: none;">
+      <h1>Login</h1>
+      <input type="text" id="login-username" placeholder="Username">
+      <input type="password" id="login-password" placeholder="Password">
+      <button onclick="handleLogin()">Login</button>
+      <p class="redirect-text">Not registered? <a href="#" onclick="showPage('register-page')">Register here</a></p>
+    </div>
+
+    <!-- Expense Tracker Page -->
+    <div id="expense-page" class="page" style="display: none;">
+        <h1>Expense Tracker</h1>
+        <input type="date" id="expense-date">
+        <input type="text" id="expense-category" placeholder="Category">
+        <input type="number" id="expense-amount" placeholder="Amount">
+        <input type="text" id="expense-note" placeholder="Note">
+        
+        <div class="button-group">
+          <button onclick="handleAddExpense()">Add Expense</button>
+          <button onclick="handleGetExpenses()">Get Expenses</button>
+          <button onclick="handleTotalExpense()">Calculate Total</button>
+          <button onclick="handleLogout()">Logout</button>
+        </div>
+      
+        <div id="expenses-container">
+          <h2>Your Expenses:</h2>
+          <ul id="expenses-list"></ul>
+        </div>
+      
+        <div id="total-expense-container">
+          <h2>Total Expense: ₹<span id="total-expense">0.00</span></h2>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

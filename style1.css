@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dark blue gradient */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    outline: none;
+  }
+  
+  button {
+    padding: 12px;
+    background: #ff6f61; /* Coral color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ff3b2f; /* Darker coral on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.4);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  .redirect-text {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .redirect-text a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .redirect-text a:hover {
+    text-decoration: underline;
+  }
+  
+  #expenses-container {
+    margin-top: 20px;
+  }
+  
+  #expenses-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #expenses-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  #expenses-list li:hover {
+    transform: translateY(-2px);
+  }
+  
+  #total-expense-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #total-expense {
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  
+  /* Login Page Specific Styles */
+  #login-page {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  #login-page h1 {
+    color: #ff6f61;
+  }
+  
+  #login-page input {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  #login-page button {
+    background: #4caf50; /* Green color for login button */
+  }
+  
+  #login-page button:hover {
+    background: #45a049; /* Darker green on hover */
+  }
+  
+  /* Expense Tracker Page Specific Styles */
+  #expense-page {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  #expense-page .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  #expense-page .button-group button {
+    flex: 1 1 calc(50% - 10px); /* Two buttons per row */
+    max-width: calc(50% - 10px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input, button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    #expense-page .button-group button {
+      flex: 1 1 100%; /* One button per row on small screens */
+      max-width: 100%;
+    }
+  }
